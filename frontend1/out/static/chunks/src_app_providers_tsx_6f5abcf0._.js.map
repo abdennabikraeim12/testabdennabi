@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Lenovo/Desktop/abdennabi/frontend1/src/app/providers.tsx"],"sourcesContent":["\r\n'use client';\r\n\r\nimport { QueryClient, QueryClientProvider } from '@tanstack/react-query';\r\nimport { ReactNode, useState } from 'react';\r\n\r\nexport function QueryProvider({ children }: { children: ReactNode }) {\r\n  const [queryClient] = useState(() => new QueryClient({\r\n    defaultOptions: {\r\n      queries: {\r\n        staleTime: 60 * 1000, // 1 minute\r\n        retry: false,\r\n        refetchOnWindowFocus: false,\r\n      },\r\n    },\r\n  }));\r\n\r\n  return (\r\n    <QueryClientProvider client={queryClient}>\r\n      {children}\r\n    </QueryClientProvider>\r\n  );\r\n}"],"names":[],"mappings":";;;;AAGA;AAAA;AACA;;;AAHA;;;AAKO,SAAS,cAAc,EAAE,QAAQ,EAA2B;;IACjE,MAAM,CAAC,YAAY,GAAG,CAAA,GAAA,6JAAA,CAAA,WAAQ,AAAD;kCAAE,IAAM,IAAI,gLAAA,CAAA,cAAW,CAAC;gBACnD,gBAAgB;oBACd,SAAS;wBACP,WAAW,KAAK;wBAChB,OAAO;wBACP,sBAAsB;oBACxB;gBACF;YACF;;IAEA,qBACE,6LAAC,yLAAA,CAAA,sBAAmB;QAAC,QAAQ;kBAC1B;;;;;;AAGP;GAhBgB;KAAA","debugId":null}}]
+}

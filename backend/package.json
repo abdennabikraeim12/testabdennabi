@@ -1,0 +1,39 @@
+{
+  "name": "platform-manager",
+  "version": "1.0.0",
+  "description": "Backend for platform course",
+  "scripts": {
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "build": "nest build",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.3",
+    "@nestjs/config": "^3.2.0",
+    "@nestjs/core": "^11.1.3",
+    "@nestjs/jwt": "^10.0.2",
+    "@nestjs/passport": "^10.0.3",
+    "@nestjs/platform-express": "^11.1.3",
+    "@nestjs/swagger": "^11.2.0",
+    "@prisma/client": "^6.6.0",
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@nestjs/testing": "^11.1.3",
+    "@types/node": "^20.0.0",
+    "prisma": "^6.6.0",
+    "typescript": "^5.0.0"
+  }
+}
