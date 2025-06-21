@@ -1,9 +1,14 @@
 import { ProjectForm } from "@/app/components/projects/ProjectForm"
+import api from "@/app/lib/api"
 
 async function getProject(id: string) {
-  const res = await fetch(`http://localhost:3000/api/projects/${id}`)
-  if (!res.ok) throw new Error('Failed to fetch project')
-  return res.json()
+  try {
+    const response = await api.get(`/projects/${id}`)
+    return response.data
+  } catch (error) {
+    console.error('Failed to fetch project:', error)
+    throw new Error('Failed to fetch project')
+  }
 }
 
 export default async function ProjectDetailPage({
